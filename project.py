@@ -33,7 +33,7 @@ domain = 'login'
 session_id, instance = SalesforceLogin(username=username, password=password, security_token=security_token, domain=domain)
 sf = Salesforce(instance=instance, session_id=session_id)
 print(sf)
-Account = SFType('Python__c', session_id, instance)
+PythonC = SFType('Python__c', session_id, instance)
 
 data = {
     'Name': nome[0],
@@ -41,5 +41,5 @@ data = {
     'Email__c': contato
 }
 
-response = Account.create(data)
+response = PythonC.create(data)
 print(response)
